@@ -1,0 +1,19 @@
+Question 3
+
+Part a: Explain the behavior of Time.deltaTime in Unity
+Time.deltaTime ensures that the movement and game logic in a Unity game are consistent regardless of frame rates. It represents the amount of time that has passed since the last frame, allowing calculations like player movement to be based on actual time rather than frame count. This ensures that all players move at the correct speed, even if their FPS is different
+
+Part b: Forza Horizon usage of Time.deltaTime:
+	In this game, Time.deltaTime is used to ensure that all cars move at the same speed regardless of the frame rates of the players' computers; moreover, instead of counting frames to determine speed (since a higher frame rate = more updates = faster car), the speed is determined by how much time has passed. For example, at one point the player's screen lagged for a moment but the car still went at the same speed that it was going before the lag. If this user did not have Time.deltaTime, the car would have slowed down since the frame would load at a slower rate. Additionally, if there was no Time.deltaTime then the ability to win the racing game would depend on the frame speed of the players' computer. Moreover, those with higher fps would win since the car's speed would depend on how quickly the frames updated. 
+ 
+Question 5: Explain the following:
+
+a) Mesh Renderer
+	The Mesh Renderer is a component that makes a gameObject visible to the 	camera; if the Mesh Renderer is off, the object is still there, it is just 	not visible.
+b) Box collider
+	The box collider allows objects to interact with each other through 	collision by assigning a box-shaped collision area around GameObjects.
+c) Input.GetAxis method 
+	This method allows players to move their player using the keyboard. The 	method does this by returning the value of a virtual horizontal and 	vertical axes, which can be used to detect input from devices like 	keyboards, game controllers, and joysticks.
+	
+d) Rigid body
+	This component allows physics to be applied to gameObjects. The Physics 	behaviors applied include: gravity, collision, and forces. 
